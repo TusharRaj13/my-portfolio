@@ -1,0 +1,52 @@
+.sidebar{
+    position:fixed;
+    left:0;
+    background: transparent;
+    font-size: 16px;
+    width: 5rem;
+    height: 100vh;
+    align-items: center;
+}
+
+.dot {display:inline-block; width:10px; height:10px; background-color:rgba(255,255,255,0.5); border-radius:10px; z-index:999; content:''; color:transparent; font-size:14px; line-height:10px; vertical-align:middle; margin:0; font-weight:800;}
+.dot:hover {background-color:rgba(255,255,255,1); color:rgba(255,255,255,1);}
+.dot .number, .dot .title {margin:0px 15px 20px 0px; color: white; position:relative; top:0px; left:20px; text-transform: uppercase;}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    height: 100vh;
+}
+
+nav ul li{
+    margin: 0, 1rem;
+    padding: 1rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+nav ul li:hover a .number{
+    display: none;
+}
+
+nav ul li:hover a .title{
+    display: block;
+}
+
+nav ul li a .number {
+    display: block;
+}
+
+nav ul li a .title {
+    display: none;
+}
+
+.active{
+
+}
