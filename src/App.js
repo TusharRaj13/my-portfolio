@@ -46,6 +46,10 @@ function App() {
       <AboutContent/>
       <ProjectContent/>
       <ContactContent/>
+      <footer>
+        <div> &copy; {new Date().getFullYear()}. All Rights Reserved.</div>
+        <div> Build with <span style={{color:"red"}}>❤</span> by Tushar Raj Gupta</div>
+      </footer>
     </div>
   );
 }

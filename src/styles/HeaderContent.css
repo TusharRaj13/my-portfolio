@@ -2,11 +2,16 @@
     background: #252934;
     padding: 0;
 }
+
 .flex{
     /* align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center; */
+    /* display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto; */
     position: absolute;
     left: 50%;
     top: 50%;

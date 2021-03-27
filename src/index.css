@@ -7,6 +7,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body *{
+  box-sizing: border-box;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -20,8 +23,10 @@ section {
   color: white;
   margin: 0;
   padding: 0;
-  
+  position: relative;
 }
+
+
 
 :root {
   font-size: 16px;
@@ -43,4 +48,42 @@ body::-webkit-scrollbar-track{
 
 body::-webkit-scrollbar-thumb{
   background: var(--accent);
+}
+
+.fake-big{
+  position:absolute;
+  top:10rem;
+  left:0;
+  z-index:0;  
+  color:rgba(255, 255, 255, 0.1);
+}
+.fake-big{
+  top:0;
+  left:0;
+  display:-webkit-inline-box;
+  display:-ms-inline-flexbox;
+  display:flex;
+  align-items:flex-start;
+  text-align:left;
+  justify-content:flex-start;
+}
+
+@media only screen and (min-width:600px){
+  .fake-big{
+    font-size:10rem;
+    left: 5rem;
+  }
+  section{
+    padding: 5rem 1rem 5rem 6rem;
+  }
+}
+
+@media only screen and (max-width:600px){
+  .fake-big{
+    font-size: 5rem;
+    left:0;
+  }
+  section{
+    padding: 3rem 1rem;
+  }
 }

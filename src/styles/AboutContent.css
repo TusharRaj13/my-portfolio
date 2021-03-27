@@ -1,0 +1,35 @@
+.aboutContent{
+    min-height: 100vh;
+}
+.aboutContent img{
+    filter: grayscale(50%);
+}
+.infoContent{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+@media only screen and (min-width: 600px){
+    .infoContent{
+        padding: 1rem 5rem;
+        flex-direction: row;
+    }
+    .infoContent h2{
+        text-align: right;
+    }
+    .infoContent p{
+        text-align: left;
+    }
+}
+@media only screen and (max-width: 600px){
+    .infoContent{
+        padding: 0 1rem;
+        flex-direction: column;
+    }
+    .infoContent h2{
+        text-align: center;
+    }
+    .infoContent p{
+        text-align: justify;
+    }
+}

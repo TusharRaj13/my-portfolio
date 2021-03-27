@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+footer{
+  padding: 2rem 0;
+  background: #1e1e1e;
+  color: white;
+}
+@media only screen and (min-width:600px){
+  footer{
+    margin-bottom:0;
+    padding: 2rem 1rem 2rem 6rem;
+  }
+}
+@media only screen and (max-width:600px){
+  footer{
+    margin-bottom: 5rem;
+    padding: 2rem 0;
+  }
+}
