@@ -1,29 +1,32 @@
 import React from 'react'
 import ProjectItem from './ProjectItem';
 import '../styles/ProjectContainer.css'
+import fc from '../static/fc.png';
+import vc from '../static/vc.png';
+import indi from '../static/indi.png';
 
 function ProjectContainer() {
     const projectlist = [
         {
             id:1,
             name:"Companion for Fortnite",
-            img:"../static/fc.png",
+            img:fc,
             tech:"UWP C#",
-            url:""
+            url:"https://www.microsoft.com/store/apps/9NR9PX55K522"
         },
         {
             id:2,
             name:"Companion for Valorant",
-            img:"../static/vc.png",
+            img:vc,
             tech:"UWP C#",
-            url:""
+            url:"https://www.microsoft.com/store/apps/9N0XGX7KBFNL"
         },
         {
             id:3,
             name:"IndiClassroom",
-            img:"../static/indi.png",
+            img:indi,
             tech:"MEAN Stack",
-            url:""
+            url:"https://github.com/TusharRaj13/IndiClassroom"
         },
     ]
     return (

@@ -20,7 +20,7 @@ class ContactContent extends Component {
                             <input type="email" placeholder="Email"/>
                         </div>
                         <div>
-                            <textarea placeholder="Message"/>
+                            <textarea placeholder="Message" rows="4"/>
                         </div>
                         <div>
                             <input type="submit" className="btn"/>
