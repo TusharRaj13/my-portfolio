@@ -2,7 +2,7 @@
     min-height: 100vh;
 }
 .aboutContent img{
-    filter: grayscale(50%);
+    filter: grayscale(100%);
 }
 .infoContent{
     display: flex;

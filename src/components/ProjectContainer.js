@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ProjectItem from './ProjectItem';
 import '../styles/ProjectContainer.css'
 import fc from '../static/fc.png';
@@ -6,6 +6,12 @@ import vc from '../static/vc.png';
 import indi from '../static/indi.png';
 
 function ProjectContainer() {
+    useEffect(()=>{
+        fetch('https://cricketapi.platform.iplt20.com/tournaments/22399/standings')
+        .then(res => res.json()).then(json => {
+            console.log(json);
+        })
+    }, [])
     const projectlist = [
         {
             id:1,

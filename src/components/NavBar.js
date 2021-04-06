@@ -6,23 +6,60 @@ class NavBar extends Component {
     constructor(props) {
         super(props)
         var t = localStorage.getItem('theme');
-        if(!t)
-            t = "red";
-        this.state = {
-             theme : t
+        if(!t){
+            t = 0;
         }
-        this.changeTheme(this.state.theme);
-        this.changeThemeHandler = this.changeThemeHandler.bind(this);
+        this.state = {
+            index : parseInt(t)
+        }
+        this.changeTheme(t);
+        //this.changeThemeHandler = this.changeThemeHandler.bind(this);
     }
 
-    changeTheme(themeInfo){
-        document.documentElement.style.setProperty('--accent',themeInfo);
-        localStorage.setItem('theme', themeInfo);
+    theme_list = [
+        {
+            name : "Theme-Red",
+            accent : "#ff0000"
+        },
+        {
+            name : "Theme-Green",
+            accent : "#00ff00"
+        },
+        {
+            name : "Theme-Blue",
+            accent : "#0000ff"
+        },
+        {
+            name : "Theme-Orange",
+            accent : "#ffa500" 
+        }
+    ]
+
+    changeTheme(themeIndex){
+        document.documentElement.classList.add('theme-transition')
+        // this.theme_list.find((theme) => {
+        //     if(theme.name === themeInfo){
+        //         document.documentElement.style.setProperty('--accent',theme.accent);
+        //     }
+        // })
+        var theme = this.theme_list[themeIndex%this.theme_list.length];
+        document.documentElement.style.setProperty('--accent', theme.accent);
+        localStorage.setItem('theme', themeIndex%this.theme_list.length);
+        window.setTimeout(function() {
+            document.documentElement.classList.remove('theme-transition')
+          }, 500)
     }
     
-    changeThemeHandler() {
-        // e.preventDefault();
-        this.changeTheme("blue");
+    // changeThemeHandler() {
+    //     // e.preventDefault();
+    //     this.changeTheme("blue");
+    // }
+
+    clickHandler = () => {
+        this.setState(
+            {index : this.state.index+1}
+        )
+        this.changeTheme(this.state.index);
     }
     
     render() {
@@ -59,6 +96,12 @@ class NavBar extends Component {
                                 <Icon iconName="ContactLink" className="nav-icon" />
                                 <span className="link-text">Contact</span>
                             </a>
+                        </li>
+                        <li className="nav-item">
+                            <div className="nav-link" onClick={this.clickHandler} >
+                                <Icon iconName="Color" className="nav-icon" />
+                                <span className="link-text">Theme</span>
+                            </div>
                         </li>
                         {/* <li className="nav-item">
                             <button className="btn" onClick={this.changeThemeHandler}>Change Theme</button>

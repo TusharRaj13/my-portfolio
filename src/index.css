@@ -6,9 +6,19 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* scroll-behavior: smooth; */
+  /* transition: var(--accent) 1000ms linear; */
 }
 body *{
   box-sizing: border-box;
+}
+
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *:before,
+html.theme-transition *:after {
+  transition: all 400ms !important;
+  transition-delay: 0 !important;
 }
 
 code {
@@ -25,9 +35,6 @@ section {
   padding: 0;
   position: relative;
 }
-
-
-
 :root {
   font-size: 16px;
   font-family: 'Consolas';

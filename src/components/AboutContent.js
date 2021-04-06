@@ -17,8 +17,10 @@ class AboutContent extends Component {
                     </h2>
                     <p>
                         I'm passionate about building execellent software that improves the live of those around me. I specialize in creating UWP applications and web apps.
-                    </p>
+                    </p>                    
                 </div>
+                <br/>
+                <a target="_black" rel="noreferrer" href="https://tusharrajgupta.blob.core.windows.net/docs/TusharRajGupta%20-%20CV.pdf" className="btn">Download Resume</a>
             </section>
         )
     }
