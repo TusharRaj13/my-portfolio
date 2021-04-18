@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Icon } from '@fluentui/react/lib/Icon'
 import "../styles/NavBar.css"
+import { Link } from 'react-scroll';
 
 class NavBar extends Component {
     constructor(props) {
@@ -19,19 +20,33 @@ class NavBar extends Component {
     theme_list = [
         {
             name : "Theme-Red",
-            accent : "#ff0000"
+            accent : "#f25002",
+            accentDark : "#f4631b"
         },
         {
             name : "Theme-Green",
-            accent : "#00ff00"
+            accent : "#107b10",
+            accentDark: "#0e6e0e"
+        },
+        {
+            name : "Theme-Green2",
+            accent : "#7bff00",
+            accentDark: "#8ac113"
         },
         {
             name : "Theme-Blue",
-            accent : "#0000ff"
+            accent : "#00a4ef",
+            accentDark: "#18acf1"
         },
         {
-            name : "Theme-Orange",
-            accent : "#ffa500" 
+            name : "Theme-Yellow",
+            accent : "#ffb900",
+            accentDark: "#ffc219"
+        },
+        {
+            name : "Theme-Pink",
+            accent : "#ee206b",
+            accentDark: "#ef3478"
         }
     ]
 
@@ -44,6 +59,7 @@ class NavBar extends Component {
         // })
         var theme = this.theme_list[themeIndex%this.theme_list.length];
         document.documentElement.style.setProperty('--accent', theme.accent);
+        document.documentElement.style.setProperty('--accent-dark', theme.accentDark)
         localStorage.setItem('theme', themeIndex%this.theme_list.length);
         window.setTimeout(function() {
             document.documentElement.classList.remove('theme-transition')
@@ -68,34 +84,34 @@ class NavBar extends Component {
                 <nav className="navbar">
                     <ul className="navbar-nav">
                         <li className="logo">
-                            <a className="nav-link" href="#home">
+                            <Link className="nav-link" to="home" spy={true} smooth={true} offset={0} duration={500}>
                                 <span className="link-text">Tushar Raj</span>
                                 <Icon iconName="SkypeCircleArrow" className="nav-icon" />
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#home">
+                            <Link className="nav-link" to="home" spy={true} smooth={true} offset={0} duration={500}>
                                 <Icon iconName="Home" className="nav-icon" />
                                 <span className="link-text">Home</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#about">
+                            <Link className="nav-link" to="about" spy={true} smooth={true} offset={0} duration={500}>
                                 <Icon iconName="ContactInfo" className="nav-icon" />
                                 <span className="link-text">About</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#projects">
+                            <Link className="nav-link" to="projects" spy={true} smooth={true} offset={0} duration={500}>
                                 <Icon iconName="ProjectCollection" className="nav-icon" />
                                 <span className="link-text">Projects</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#contact">
+                            <Link className="nav-link" to="contact" spy={true} smooth={true} offset={0} duration={500}>
                                 <Icon iconName="ContactLink" className="nav-icon" />
                                 <span className="link-text">Contact</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
                             <div className="nav-link" onClick={this.clickHandler} >

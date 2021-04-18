@@ -39,7 +39,7 @@ function ProjectContainer() {
         <div >
             <div className="projectContainer">
                 {projectlist.map((project)=>(
-                    <ProjectItem value={project}/>
+                    <ProjectItem key={project.id} value={project}/>
                 ))}
             </div>
         </div>

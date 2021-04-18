@@ -43,6 +43,7 @@ section {
   --bg-primary: #23232e;
   --bg-secondary: #141418;
   --accent: #0078d4;
+  --accent-dark: #106ebe;
 }
 
 body::-webkit-scrollbar{
