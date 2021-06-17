@@ -20,7 +20,7 @@ class AboutContent extends Component {
                     </p>                    
                 </div>
                 <br/>
-                <a target="_black" rel="noreferrer" href="https://tusharrajgupta.blob.core.windows.net/docs/TusharRajGupta%20-%20CV.pdf" className="btn">Download Resume</a>
+                <a target="_black" rel="noreferrer" href="https://tusharrajgupta.blob.core.windows.net/docs/TusharRajGupta-%20CV.pdf" className="btn">Download Resume</a>
             </section>
         )
     }

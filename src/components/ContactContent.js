@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import '../styles/ContactContent.css'
-
+import { FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa'
 
 function ContactContent() {
     const name = useRef(null);
@@ -34,6 +34,17 @@ function ContactContent() {
                         <input type="submit" className="btn" />
                     </div>
                 </form>
+            </div>
+            <div className="socialLink">
+                <a className="socialIcon" href="https://www.instagram.com/tusharraj13/" target="_blank" rel="noreferrer">
+                    <FaInstagram className="socialIco"/>
+                </a>
+                <a className="socialIcon" href="https://www.linkedin.com/in/tushar-raj-gupta-8b944213a/" target="_blank" rel="noreferrer">
+                    <FaLinkedinIn className="socialIco"/>
+                </a>
+                <a className="socialIcon" href="https://twitter.com/TusharRajGupta" target="_blank" rel="noreferrer">
+                    <FaTwitter className="socialIco"/>
+                </a>
             </div>
         </section>
     )

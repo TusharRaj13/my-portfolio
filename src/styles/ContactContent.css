@@ -22,3 +22,17 @@ textarea{
 textarea:focus{
     border-color: var(--accent);
 }
+.socialLink{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 15px 0;
+}
+.socialIcon{
+    padding: 10px;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+.socialIco{
+    font-size: 2.5rem;
+}

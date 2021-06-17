@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Icon } from '@fluentui/react/lib/Icon'
 import "../styles/NavBar.css"
-import { Link } from 'react-scroll';
+import { FaHome, FaIdCard, FaBriefcase, FaAddressBook, FaArrowLeft, FaPaintBrush } from 'react-icons/fa'
+// import { Link } from 'react-scroll';
 
 class NavBar extends Component {
     constructor(props) {
@@ -84,38 +84,38 @@ class NavBar extends Component {
                 <nav className="navbar">
                     <ul className="navbar-nav">
                         <li className="logo">
-                            <Link className="nav-link" to="home" spy={true} smooth={true} offset={0} duration={500}>
+                            <a className="nav-link" href="#home">
                                 <span className="link-text">Tushar Raj</span>
-                                <Icon iconName="SkypeCircleArrow" className="nav-icon" />
-                            </Link>
+                                <FaArrowLeft className="nav-icon" />
+                            </a>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="home" spy={true} smooth={true} offset={0} duration={500}>
-                                <Icon iconName="Home" className="nav-icon" />
+                            <a className="nav-link" href="#home">
+                                <FaHome className="nav-icon" />
                                 <span className="link-text">Home</span>
-                            </Link>
+                            </a>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="about" spy={true} smooth={true} offset={0} duration={500}>
-                                <Icon iconName="ContactInfo" className="nav-icon" />
+                            <a className="nav-link" href="#about">
+                                <FaIdCard className="nav-icon" />
                                 <span className="link-text">About</span>
-                            </Link>
+                            </a>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="projects" spy={true} smooth={true} offset={0} duration={500}>
-                                <Icon iconName="ProjectCollection" className="nav-icon" />
+                            <a className="nav-link" href="#projects">
+                                <FaBriefcase className="nav-icon" />
                                 <span className="link-text">Projects</span>
-                            </Link>
+                            </a>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="contact" spy={true} smooth={true} offset={0} duration={500}>
-                                <Icon iconName="ContactLink" className="nav-icon" />
+                            <a className="nav-link" href="#contact">
+                                <FaAddressBook className="nav-icon" />
                                 <span className="link-text">Contact</span>
-                            </Link>
+                            </a>
                         </li>
                         <li className="nav-item">
                             <div className="nav-link" onClick={this.clickHandler} >
-                                <Icon iconName="Color" className="nav-icon" />
+                                <FaPaintBrush className="nav-icon" />
                                 <span className="link-text">Theme</span>
                             </div>
                         </li>

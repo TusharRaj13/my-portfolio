@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../styles/HeaderContent.css'
 import bg from '../bg-gray.svg'
 // import { PrimaryButton, DefaultButton } from '@fluentui/react'
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 
 class HeaderContent extends Component {
     render() {
@@ -11,8 +11,8 @@ class HeaderContent extends Component {
                 <div className="contentContainer">
                     <div className="flex">
                         <div className="headerText">
-                            Hello, I'm <span className="highlightText">Tushar Raj Gupta</span>.<br/>I'm a full stack web and UWP developer.<br/>
-                            <br/><Link to="projects" spy={true} smooth={true} offset={0} duration={500} className="btn">View My Work</Link>
+                            Hello, I'm <span className="highlightText">TUSHAR RAJ GUPTA</span>.<br/>I'm a full stack web and UWP developer.<br/>
+                            <br/><a href="#projects" className="btn">View My Work</a>
                         </div>   
                         {/* <PrimaryButton text="View My Work" /> */}
                     </div>

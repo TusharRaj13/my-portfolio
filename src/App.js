@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import { initializeIcons } from '@fluentui/font-icons-mdl2'
+//import { initializeIcons } from '@fluentui/font-icons-mdl2'
 import NavBar from './components/NavBar';
 import HeaderContent from './components/HeaderContent';
 import AboutContent from './components/AboutContent';
@@ -11,7 +11,6 @@ import ProjectContent from './components/ProjectContent';
 
 
 function App() {
-  initializeIcons();
   // loadTheme({
   //   palette: {
   //     themePrimary: '#ff0000',
@@ -41,11 +40,11 @@ function App() {
   
   return (
     <div className="App">
-      <NavBar/>
+      <NavBar/>      
       <HeaderContent/>
       <AboutContent/>
       <ProjectContent/>
-      <ContactContent/>
+      <ContactContent/>    
       <footer>
         <div> &copy; {new Date().getFullYear()}. All Rights Reserved.</div>
         <div> Build with <span style={{color:"red"}}>❤</span> by Tushar Raj Gupta</div>
