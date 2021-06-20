@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import '../styles/ContactContent.css'
-import { FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { FaLinkedinIn, FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa'
 
 function ContactContent() {
     const name = useRef(null);
@@ -44,6 +44,9 @@ function ContactContent() {
                 </a>
                 <a className="socialIcon" href="https://twitter.com/TusharRajGupta" target="_blank" rel="noreferrer">
                     <FaTwitter className="socialIco"/>
+                </a>
+                <a className="socialIcon" href="https://github.com/TusharRaj13" target="_blank" rel="noreferrer">
+                    <FaGithub className="socialIco"/>
                 </a>
             </div>
         </section>

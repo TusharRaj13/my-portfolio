@@ -33,6 +33,9 @@ textarea:focus{
     text-decoration: none;
     color: var(--text-primary);
 }
+.socialIcon:hover{
+    color: var(--text-secondary);
+}
 .socialIco{
     font-size: 2.5rem;
 }
